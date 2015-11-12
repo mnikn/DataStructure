@@ -7,6 +7,8 @@ CONFIG -= qt
 SOURCES += main.cpp
 
 HEADERS += \
-    vector.h \
-    VectorTest.h
+    VectorTest.h \
+    Vector.h \
+    List.h \
+    ListTest.h
 

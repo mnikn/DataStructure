@@ -1,11 +1,8 @@
 #ifndef VECTORTEST_H
 #define VECTORTEST_H
 
-#include <iostream>
 #include <cassert>
-#include "vector.h"
-using std::cout;
-using std::endl;
+#include "Vector.h"
 
 //测试构造函数和析构函数
 void test_case1()
@@ -55,6 +52,7 @@ void test_case1()
     assert(f.size()==3);
 }
 
+//测试push和pop函数
 void test_case2()
 {
     Vector<int> a;
