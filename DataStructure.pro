@@ -10,5 +10,9 @@ HEADERS += \
     VectorTest.h \
     Vector.h \
     List.h \
-    ListTest.h
+    ListTest.h \
+    Stack.h \
+    StackTest.h \
+    Queue.h \
+    QueueTest.h
 

@@ -4,7 +4,7 @@
 #include <cassert>
 #include "Vector.h"
 
-//测试构造函数和析构函数
+//测试向量的构造函数和析构函数
 void test_case1()
 {
 
@@ -69,7 +69,7 @@ void test_case2()
     assert(a.empty());
 }
 
-//测试插入操作和删除操作
+//测试向量的插入操作和删除操作
 void test_case3()
 {
     Vector<int> a = {1,2,3};
@@ -127,7 +127,7 @@ void test_case3()
     assert(a.empty());
 }
 
-/*****测试查找操作*****/
+//测试向量的查找操作
 void test_case4()
 {
     Vector<int> v = {1,2,3};
@@ -167,6 +167,7 @@ void test_case4()
     assert(a.binarySearchLast(4)==-1);
 }
 
+//测试向量的去重操作
 void test_case5()
 {
     Vector<int> a = {1,2,3};
