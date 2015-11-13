@@ -5,6 +5,6 @@ Contain List:
   * vector
   * list
   * stack
-  * dequeue
+  * queue
   * binaryTree
   * graph
