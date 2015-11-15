@@ -5,7 +5,7 @@
 using std::size_t;
 using std::swap;
 
-const int DEFAULT_CAPACITY = 3;
+
 
 template <typename T>
 class Queue{
@@ -13,6 +13,7 @@ private:
     size_t _capacity;
     size_t _size;
     T *_elem;
+    static const int DEFAULT_CAPACITY = 3;
 
 /*****辅助函数*****/
 private:
@@ -103,7 +104,7 @@ void Queue<T>::enqueue(const T &e)
 template <typename T>
 T Queue<T>::dequeue()
 {
-    int ret = front();
+    T ret = front();
     for(int i=0;i<_size;++i){
         swap(_elem[i],_elem[i+1]);
     }

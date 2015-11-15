@@ -9,7 +9,6 @@ using std::ostream;
 using std::size_t;
 using std::initializer_list;
 
-const int DEFAULT_CAPACITY = 3;
 
 template <typename T>
 class Vector
@@ -19,6 +18,8 @@ private:
     size_t _capacity;
     size_t _size;
     T *_elem;
+    static const int DEFAULT_CAPACITY = 3;
+
 
 /*****辅助函数*****/
 private:

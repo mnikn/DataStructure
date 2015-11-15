@@ -14,5 +14,7 @@ HEADERS += \
     Stack.h \
     StackTest.h \
     Queue.h \
-    QueueTest.h
+    QueueTest.h \
+    BinaryTree.h \
+    BinaryTreeTest.h
 
