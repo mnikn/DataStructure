@@ -16,5 +16,7 @@ HEADERS += \
     Queue.h \
     QueueTest.h \
     BinaryTree.h \
-    BinaryTreeTest.h
+    BinaryTreeTest.h \
+    Graph.h \
+    GraphTest.h
 

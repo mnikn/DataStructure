@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BinaryTreeTest.h"
+#include "GraphTest.h"
 using namespace std;
 
 int main()

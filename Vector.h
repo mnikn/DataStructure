@@ -6,7 +6,6 @@
 using std::swap;
 using std::ends;
 using std::ostream;
-using std::size_t;
 using std::initializer_list;
 
 
@@ -15,8 +14,8 @@ class Vector
 {
 
 private:
-    size_t _capacity;
-    size_t _size;
+    int _capacity;
+    int _size;
     T *_elem;
     static const int DEFAULT_CAPACITY = 3;
 
@@ -33,6 +32,12 @@ public:
         _elem = new T[_capacity = n];
         _size = 0;
     }
+    Vector(int n,const T &e)
+    {
+        int array[n];
+        for(int i=0;i<n;++i) array[i] = e;
+        copyFrom(array,0,n);
+    }
     Vector(const initializer_list<T> &array)
     {
         copyFrom(array.begin(),0,array.size());
@@ -41,7 +46,7 @@ public:
     {
         copyFrom(array,lo,hi);
     }
-    template <size_t N>
+    template <int N>
     Vector(const T (&array)[N])
     {
         copyFrom(array,0,N);
@@ -62,13 +67,13 @@ public:
 /*****声明各类接口*****/
 public:
     void clear();
-    size_t size() const;
+    int size() const;
     bool empty() const;
     void reserve(int capacity);
     void push_back(const T &e);
     T pop_back();
     void insert(int index,const T &e);
-    size_t erase(int lo,int hi);
+    int erase(int lo,int hi);
     T erase(int index);
     int deduplicate();
     int unique();
@@ -97,7 +102,7 @@ public:
         copyFrom(array.begin(),0,array.size());
         return *this;
     }
-    template <size_t N>
+    template <int N>
     Vector<T> operator=(const T (&array)[N])
     {
         copyFrom(array,0,N);
@@ -252,7 +257,7 @@ void Vector<T>::clear()
 }
 
 template<typename T>
-size_t Vector<T>::size() const
+int Vector<T>::size() const
 {
     return _size;
 }
@@ -299,7 +304,7 @@ void Vector<T>::insert(int index, const T &e)
 }
 
 template<typename T>
-size_t Vector<T>::erase(int lo, int hi)
+int Vector<T>::erase(int lo, int hi)
 {
     if(lo==hi) return 0;
     while(hi<_size){
