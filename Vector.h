@@ -32,12 +32,6 @@ public:
         _elem = new T[_capacity = n];
         _size = 0;
     }
-    Vector(int n,const T &e)
-    {
-        int array[n];
-        for(int i=0;i<n;++i) array[i] = e;
-        copyFrom(array,0,n);
-    }
     Vector(const initializer_list<T> &array)
     {
         copyFrom(array.begin(),0,array.size());
