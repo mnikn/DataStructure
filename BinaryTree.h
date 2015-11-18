@@ -2,8 +2,8 @@
 #define BINARYTREE_H
 
 #include <iostream>
-#include <Queue.h>
-#include <Vector.h>
+#include "Queue.h"
+#include "Vector.h"
 #define find_end(p) p?p->height:-1
 using std::size_t;
 using std::cout;
@@ -43,12 +43,12 @@ struct Node{
 
 template <typename T>
 class BinaryTree{
-private:
+protected:
     size_t _size;
     Node<T> *_root;
 
 /*****辅助函数*****/
-private:
+protected:
     int updateHeight(Node<T> *node);
     void updateHeightAbove(Node<T> *node);
     template<typename VST> void travLevel_aux(Queue<Node<T>* >queue,VST &visit);

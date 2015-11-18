@@ -18,5 +18,6 @@ HEADERS += \
     BinaryTree.h \
     BinaryTreeTest.h \
     Graph.h \
-    GraphTest.h
+    GraphTest.h \
+    AVL.h
 

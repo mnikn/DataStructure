@@ -1,9 +1,9 @@
 #include <iostream>
-#include "GraphTest.h"
+#include "AVL.h"
 using namespace std;
 
 int main()
 {
-    test_all();
+    return 0;
 }
 
